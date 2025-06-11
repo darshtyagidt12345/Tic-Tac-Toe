@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="javascript">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="li1"><a href="Game.html">Game</a></li>
+                <li class="li3"><a href="index.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <div>
+            <label for="namea">Enter the name who is taking X:</label>
+        </div>
+        <input type="text" name="name" id="name">
+        <div>
+            <label for="nameb">Enter the name who is taking O:</label>
+        </div>
+        <input type="text" name="nameb" id="nameb">
+        <a href="Game.html"></a>
+        <div>
+            <button onclick="abc()" type="button">submit</button>
+        </div>
+    </form>
+</body>
+<script>
+    function abc(){
+        let inp1 = document.querySelector("#name").value
+        let inp2 = document.querySelector("#nameb").value
+        localStorage.setItem("nameX", inp1)
+        localStorage.setItem("nameO", inp2)
+        window.location.href = "/Game.html"
+    }
+</script>
+</html>
